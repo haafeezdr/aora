@@ -14,5 +14,5 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
     "nativewind-env.d.ts"
-, "app/(tabs)/bookmark.jsx", "app/(tabs)/create.jsx", "app/(tabs)/_layout.jsx"  ]
+, "app/(tabs)/bookmark.jsx", "app/(tabs)/create.jsx", "app/(tabs)/_layout.jsx", "components/CustomButton.jsx"  ]
 }
