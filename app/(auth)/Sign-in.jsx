@@ -6,15 +6,16 @@ import { Link, router } from 'expo-router'
 import { images } from '../../constants'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
-import { createUser, getCurrentUser, signIn } from '../../lib/appwrite'
+import {  getCurrentUser, signIn } from '../../lib/appwrite'
+import { useGlobalContext } from "../../context/GlobalProvider";
 
 const SignIn = () => {
+  const { setUser, setIsLogged } = useGlobalContext();
+  const [isSubmitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    email: '',
-    password: ''
-})
-
-const [isSubmitting, setSubmitting] = useState(false)
+    email: "",
+    password: "",
+  });
 
 const submit = async () => {
   if(form.email === "" || form.password === "") 
