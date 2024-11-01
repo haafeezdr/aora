@@ -22,6 +22,7 @@ export default function App() {
               className="w-[130px] h-[84px]"
               resizeMode='contain'
               />
+
             <Image 
               source={images.cards} 
               className="max-w-[380px] h-[300px] w-full"
@@ -42,11 +43,13 @@ export default function App() {
                   />
               </View>
               <Text className="text-gray-100 text-sm font-pregular text-center mt-7">Where creativity meets innovation: embark on a journey of limitless exploration with AORA.</Text>
+              
               <CustomBotton
                 title="Continue with Email"
                 handlePress={() => router.push('/Sign-in')}
                 containerStyles="w-full mt-7" 
               />
+
           </View>
         </ScrollView>
         <StatusBar backgroundColor="#161622" style="light" />
