@@ -31,7 +31,6 @@ const submit = async () => {
     try {
       const result = await createUser(form.email, form.password, form.username);
 
-      
       setUser(result);
       setIsLogged(true);
 
