@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { icons } from '../constants'
 
 const FormField = ({ title, handleChangeText, placeholder, value, otherStyles, ...props}) => {
-    const [showPassword, setshowPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState(false)
   return (
     <View className={`space-y-2 ${otherStyles}`}>
       <Text className="text-gray-100 text-base font-psemibold ">{title}</Text>
@@ -16,10 +16,10 @@ const FormField = ({ title, handleChangeText, placeholder, value, otherStyles, .
             onChangeText={handleChangeText} 
             placeholderTextColor="#7b7b8b"
             value={value} 
-            secureTextEntry={title === 'Password' && !showPassword}/>
+            secureTextEntry={title === 'Password' && !showPassword} {...props}/>
         
         {title === 'Password' && (
-          <TouchableOpacity onPress={() => setshowPassword(!showPassword)}>
+          <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
             <Image source={!showPassword ? icons.eye : icons.eyeHide} className="w-6 h-6" resizeMode='contain'/>
           </TouchableOpacity>
         )}

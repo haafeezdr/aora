@@ -7,7 +7,7 @@ import { router } from 'expo-router'
 
 const EmptyState = ({title, subtitle}) => {
   return (
-    <View className="px-4 items-center justify-center">
+    <View className="flex px-4 items-center justify-center">
       <Image source={images.empty} className="w-[270px] h-[215px]" resizeMode='contain'/>
       <Text className="text-xl font-pmedium text-white">{title}</Text>
       <Text className="text-sm text-center font-psemibold text-gray-100">{subtitle}</Text>
